@@ -1,0 +1,8 @@
+.left, .right {
+    width: 200px;
+    text-align: center;
+}
+.center {
+    width: 100%;
+    text-align: center;
+}
