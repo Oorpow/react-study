@@ -30,8 +30,8 @@ const profileSlice = createSlice({
 export const fetchBannerAction = createAsyncThunk('fetch/banner', async (extraInfo, { dispatch, getState }) => {
     // 第三种写法: 1. 发送网络请求
     const res = await axios.get('http://localhost:8000/carousel')
-    // 2. 拿到结果后dispatch action去修改state里的数据
-    dispatch(changeBannerAction(res.data.data))
+    // 2. 拿到结果后dispatch action去修改state里的数据 (第三种写法的关键，可以dispatch)
+    // dispatch(changeBannerAction(res.data.data))
     // 3. 返回结果，修改action状态为fulfilled
     return res.data.data
 })

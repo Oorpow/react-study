@@ -1,13 +1,19 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import ReactDOM from 'react-dom/client'
-import { Provider } from 'react-redux'
+import { HashRouter } from 'react-router-dom'
+// import { Provider } from 'react-redux'
 
-import App from './15_redux_toolkit/App'
-import store from './15_redux_toolkit/store'
+// import store from './15_redux_toolkit/store'
+import App from './16_react-router/App'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
-	<Provider store={store}>
-		<App />
-	</Provider>
+	// <Provider store={store}>
+	<Suspense>
+		<HashRouter>
+			<App />
+		</HashRouter>
+	</Suspense>
+
+	// </Provider>
 )
